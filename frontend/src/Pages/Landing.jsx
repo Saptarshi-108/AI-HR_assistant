@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Typer from "../components/Typer";
+import ChatbotButton from "../components/chatbot"; // chatbot added
 
 const Landing = () => {
   const videoRef = useRef(null);
@@ -12,7 +13,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
       <Navbar />
 
       {/* Hero section with video background */}
@@ -28,8 +29,8 @@ const Landing = () => {
         />
 
         {/* Overlay content */}
-        <div className="relative z-10 flex items-center justify-center h-full text-white">
-          <h1 className="text-4xl md:text-6xl font-bold">
+        <div className="relative z-10 flex items-center justify-center h-full text-white px-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-center">
             <Typer />
           </h1>
         </div>
@@ -49,12 +50,14 @@ const Landing = () => {
             journey toward smarter HR management.
           </p>
 
-          {/* Add more sections/components below */}
           <div className="h-96 bg-gray-100 mt-10 rounded-lg shadow-inner flex items-center justify-center">
             <span className="text-xl text-gray-600">More content here...</span>
           </div>
         </div>
       </section>
+
+      {/* Fixed Chatbot Button */}
+      <ChatbotButton />
     </div>
   );
 };

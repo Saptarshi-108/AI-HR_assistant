@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Typer.css";
 
-const texts = [
-  "Your Personal HR assistant",
-  "Assisting you in all your HR activites",
-  "To put the bloody HRs out of work",
-  "Ee Sala Cup Namde",
-];
+const texts = ["Your", "Personal HR assistant", "ready to help", "24 x 7"];
 
 const Typer = () => {
   const [displayText, setDisplayText] = useState("");
@@ -37,7 +32,7 @@ const Typer = () => {
   }, [charIndex, textIndex]);
 
   return (
-    <h1 className="typer-h1 text-5xl text-white uppercase text-center">
+    <h1 className="typer-h1 font-sans text-7xl text-white uppercase text-center">
       {displayText}
       <span className="typer-caret" aria-hidden="true"></span>
     </h1>
