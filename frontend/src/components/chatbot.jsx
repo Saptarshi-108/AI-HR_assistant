@@ -11,13 +11,13 @@ const ChatbotButton = () => {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Open Policy Bot"
       >
-        💬
+        <img src="src\assets\chatbot.png" className="h-10 w-10"></img>
       </button>
 
       {/* Chatbot Panel */}
       {isOpen && (
         <div className="fixed bottom-20 right-6 w-80 h-96 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-xl z-50 flex flex-col overflow-hidden">
-          <div className="bg-blue-600 text-white p-3 font-semibold flex justify-between items-center">
+          <div className="bg-blue-800 text-white p-3 font-semibold flex justify-between items-center">
             <span>PolicyBot</span>
             <button onClick={() => setIsOpen(false)} className="text-sm">
               ✖
